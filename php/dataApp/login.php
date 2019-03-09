@@ -9,11 +9,10 @@
 </head>
 
 <body>
-    <h1>Let's register a new account</h1>
-    <form action="registerScript.php" method="POST">
+    <h1>Let's Login!</h1>
+    <form action="loginCheck.php" method="POST">
         Username<input type="text" name="username">
         Password<input type="text" name="password">
-        Zip Code<input type="text" name="zipCode">
         <input type="Submit" value="Submit">
     </form>
     <script src=""></script>
