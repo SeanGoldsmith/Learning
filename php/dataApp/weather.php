@@ -6,7 +6,7 @@
     <title>DataApp</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-    <link rel="stylesheet" href=""/>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <?php if ($_SESSION['isLoggedIn'] == true) { ?>
 <body>
@@ -19,11 +19,13 @@
         $currentHigh = $parsed['main']['temp_max'];
         $location = $parsed['name'];
     ?>
-    <h1>Hi <?php echo $_SESSION['currentUser']?>! Here is the weather for <?php echo $location?>.  </h1>
-    <h3>Current temp: <?php echo $currentTemp ?> </h3><br/>
-    <h3>Current Weather Description: <?php echo $currentStatus ?> </h3><br/>
-    <h3>High Temp for today: <?php echo $currentHigh ?> </h3><br/>
-    
+    <div class="container">
+        <p><a href="traffic.php">Traffic Data</a></p>
+        <h1>Hi <?php echo $_SESSION['currentUser']?>! Here is the weather for <?php echo $location?>.  </h1>
+        <p>Current temp: <?php echo $currentTemp ?> </p><br/>
+        <p>Current Weather Description: <?php echo $currentStatus ?> </p><br/>
+        <p>High Temp for today: <?php echo $currentHigh ?> </p><br/>
+    </div>
     <script src=""></script>
 </body>
 <?php } else { ?>
